@@ -1,7 +1,7 @@
 # CS 1.6 Steam (hl.exe) — build 4554
 # Если что-то не работает — меняй VIEWANGLES и ENTITY_LIST_BASE через Cheat Engine
 
-PROCESS_NAME = "hl.exe"   # Steam; non-Steam = "cstrike.exe"
+PROCESS_NAME = "cs.exe"   # Steam; non-Steam = "cstrike.exe"
 
 HW_DLL     = "hw.dll"
 CLIENT_DLL = "client.dll"
