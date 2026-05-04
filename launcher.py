@@ -32,6 +32,7 @@ class TrainerApp(ctk.CTk):
         self.xhair = Crosshair()
 
         self._build_ui()
+        self._build_debug()
         self.aim.start()
         self.bhop.start()
         self.esp.start()
@@ -201,7 +202,21 @@ class TrainerApp(ctk.CTk):
         if self.mem.connected and not self.mem.alive():
             self._dot.configure(text_color="#ff4444")
             self._status_lbl.configure(text="DISCONNECTED")
-        self.after(2000, self._status_loop)
+        elif self.mem.connected:
+            # Показываем текущие viewangles для отладки
+            p, y, r = self.mem.get_viewangles()
+            idx = self.mem.get_local_index()
+            self._debug_lbl.configure(
+                text=f"pitch={p:.1f}  yaw={y:.1f}  idx={idx}"
+            )
+        self.after(200, self._status_loop)
+
+    def _build_debug(self):
+        self._debug_lbl = ctk.CTkLabel(
+            self, text="pitch=0  yaw=0  idx=0",
+            font=("Courier", 10), text_color="#444"
+        )
+        self._debug_lbl.pack(pady=(0, 4))
 
 
 if __name__ == "__main__":
