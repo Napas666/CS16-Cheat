@@ -8,5 +8,5 @@ echo.
 echo Starting trainer...
 echo Run CS 1.6 first, then click ATTACH.
 echo.
-python trainer.py
+python launcher.py
 pause

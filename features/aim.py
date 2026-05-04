@@ -1,5 +1,5 @@
 import math, threading, time
-from offsets import HEAD_OFFSET
+from game_offsets import HEAD_OFFSET
 
 class Aimbot:
     def __init__(self, mem):

@@ -2,11 +2,11 @@ import threading, time
 import customtkinter as ctk
 from tkinter import colorchooser
 
-from memory import GameMemory
-from features.aimbot    import Aimbot
-from features.esp       import ESPOverlay
-from features.bhop      import Bhop
-from features.crosshair import Crosshair, STYLES
+from game_memory import GameMemory
+from features.aim    import Aimbot
+from features.wallhack       import ESPOverlay
+from features.bunnyhop      import Bhop
+from features.xhair import Crosshair, STYLES
 
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("dark-blue")

@@ -1,6 +1,6 @@
 import struct, time
 import pymem, pymem.process
-from offsets import *
+from game_offsets import *
 
 class GameMemory:
     def __init__(self):

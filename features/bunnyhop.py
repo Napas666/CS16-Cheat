@@ -2,7 +2,7 @@
 Bunny Hop — автопрыжок в момент приземления.
 """
 import threading, time
-from offsets import CURSTATE_OFF, CL_ENTITY_SIZE, ENTITY_LIST_BASE
+from game_offsets import CURSTATE_OFF, CL_ENTITY_SIZE, ENTITY_LIST_BASE
 
 # onground хранится в curstate (offset 0x130) + 0xD4 внутри entity_state_t
 ONGROUND_OFF = CURSTATE_OFF + 0xD4   # = 0x130 + 0xD4 = 0x204
